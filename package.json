@@ -1,0 +1,12 @@
+{
+  "name": "policypilot-root",
+  "private": true,
+  "version": "1.0.0",
+  "description": "PolicyPilot AI - Multi-Criteria Insurance Recommendation Platform",
+  "scripts": {
+    "start": "npm --prefix frontend start",
+    "start:dev": "npm --prefix frontend run start:dev",
+    "dev": "npm --prefix frontend run dev",
+    "build": "npm --prefix frontend run build"
+  }
+}

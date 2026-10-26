@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --primary: #0284c7;
+    --primary-dark: #0369a1;
+    --primary-light: #e0f2fe;
+    --teal: #0ea5e9;
+    --teal-dark: #0284c7;
+    --slate-bg: #f0f9ff;
+  }
+
+  body {
+    background-color: #e0f2fe;
+    color: #0f172a;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  #root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-align: left;
+    background-color: transparent;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #e0f2fe;
+}
+::-webkit-scrollbar-thumb {
+  background: #bae6fd;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0284c7;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Glassmorphism light utility */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(2, 132, 199, 0.18);
+}
+
+/* Crisp airy light blue ombre background for all pages */
+.ombre-page-bg {
+  background: 
+    radial-gradient(circle at 10% 12%, rgba(2, 132, 199, 0.16) 0%, transparent 45%),
+    radial-gradient(circle at 90% 25%, rgba(56, 189, 248, 0.14) 0%, transparent 45%),
+    radial-gradient(circle at 50% 88%, rgba(2, 132, 199, 0.10) 0%, transparent 50%),
+    linear-gradient(165deg, #f0f8ff 0%, #dbeafe 36%, #eff6ff 70%, #e0f2fe 100%);
+  background-attachment: fixed;
+}
+
+.card-hover {
+  transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px -6px rgba(2, 132, 199, 0.12);
+}
